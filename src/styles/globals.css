@@ -21,3 +21,13 @@
     text-wrap: balance;
   }
 }
+
+
+/* Hide the scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+}
