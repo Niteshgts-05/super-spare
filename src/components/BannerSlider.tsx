@@ -43,19 +43,16 @@ const DUMMY_IMAGES = [
 
 const BannerSlider = () => {
   return (
-    <section className="mt-5">
-      <div className="flex flex-sb w-full overflow-x-scroll scrollbar-hide">
+    <section className="my-5">
+      <div className="flex flex-sb w-full overflow-x-scroll scrollbar-hide ">
         {DUMMY_IMAGES.map((item, index) => (
           <Image
+            className="first:ml-2 mr-2 rounded-[20px]"
             key={index}
             src={item.image}
             alt={item.alt}
             width={521}
             height={263}
-            style={{
-              borderRadius: "1.25rem",
-              marginRight: "0.75rem",
-            }}
           />
         ))}
       </div>

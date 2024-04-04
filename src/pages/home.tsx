@@ -1,11 +1,13 @@
 import React from "react";
 import BannerSlider from "@/components/BannerSlider";
+import HotDeals from "@/components/HotDeals";
 
 const Home = () => {
   return (
-    <div className="p-2">
+    <main>
       <BannerSlider />
-    </div>
+      <HotDeals />
+    </main>
   );
 };
 

@@ -22,12 +22,6 @@
   }
 }
 
-
-/* Hide the scrollbar */
-::-webkit-scrollbar {
+.scrollbar-hide::-webkit-scrollbar {
   display: none;
-}
-
-* {
-  scrollbar-width: none;
 }
