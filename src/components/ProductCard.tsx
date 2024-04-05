@@ -8,8 +8,9 @@ interface Props {
 
 export const ProductCard = ({ product }: Props) => {
   const { title, name, unitPrice, priceOfFive, image } = product;
+
   return (
-    <article className="relative bg-[#DAECD5] min-w-[198px] w-[198px] p-2 rounded-[20px] mr-2 first:ml-2 flex flex-col items-center">
+    <article className="bg-[#DAECD5] min-w-[198px] w-[198px] p-2 rounded-[20px] mr-2 first:ml-2 flex flex-col items-center">
       <div className="text-[#000] w-max max-w-full truncate font-extrabold text-sm capitalize mb-1">
         {title}
       </div>
