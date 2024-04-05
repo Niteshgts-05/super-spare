@@ -5,7 +5,7 @@ import AllParts from "@/components/AllParts";
 
 const Home = () => {
   return (
-    <main>
+    <main className="pt-2">
       <BannerSlider />
       <HotDeals />
       <AllParts />
