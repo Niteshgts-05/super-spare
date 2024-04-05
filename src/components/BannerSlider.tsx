@@ -13,7 +13,6 @@ const DUMMY_IMAGES = [
     image: "/Banner.png",
     alt: "zT6}516t",
   },
-
   {
     image: "https://dummyimage.com/521x325.png/dddddd/000000",
     alt: "hA3)cHp2pG",
