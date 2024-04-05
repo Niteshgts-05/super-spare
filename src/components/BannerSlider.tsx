@@ -43,7 +43,7 @@ const DUMMY_IMAGES = [
 
 const BannerSlider = () => {
   return (
-    <section className="my-5">
+    <section className="mb-5">
       <div className="flex flex-sb w-full overflow-x-scroll scrollbar-hide ">
         {DUMMY_IMAGES.map((item, index) => (
           <Image
