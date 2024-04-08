@@ -16,7 +16,7 @@ const DUMMY_DATA = [
     image: "https://dummyimage.com/x.png/ff4444/ffffff",
     alt: "Frontier",
     bike_name: "Nissan",
-    bike_model: "RAV4",
+    bike_model: "Splendor 13S 100CC",
     size: 4.7,
     price: 345,
     cut_price: 268,
@@ -124,10 +124,10 @@ const ProductPage = () => {
         {DUMMY_DATA.map((data, index) => (
           <div
             key={index}
-            className="mb-2 w-full h-[296px] md:w-[450px] md:h-[300px] mx-4 my-2 bg-green-100 rounded-lg overflow-hidden flex flex-col justify-between relative"
+            className="mb-2 w-full h-[296px] md:w-[450px] md:h-[300px] mx-4 my-2 overflow-hidden flex flex-col justify-between relative"
           >
             <div
-              className="w-full h-[202px] md:w-[450px] md:h-[300px] relative"
+              className="w-full h-[202px] md:w-[450px] md:h-[300px] bg-green-100 rounded-[20px] relative"
               style={{ overflow: "hidden" }}
             >
               <div className="left-[8px] top-[8px] absolute flex-col justify-start items-start gap-1 inline-flex">
@@ -137,6 +137,14 @@ const ProductPage = () => {
                   </div>
                   <div className="text-slate-950 text-[15px] font-medium font-['Poppins'] capitalize">
                     {data.bike_name}
+                  </div>
+                </div>
+                <div className="h-7 px-3 py-[9px] bg-white rounded-[30px] justify-center items-center gap-1 inline-flex">
+                  <div className="w-[18px] h-[18px] relative">
+                    <Motorcycle />
+                  </div>
+                  <div className="text-slate-950 text-[15px] font-medium font-['Poppins'] capitalize">
+                    {data.bike_model}
                   </div>
                 </div>
                 <div className="h-7 px-3 py-[9px] bg-white rounded-[30px] justify-center items-center gap-1 inline-flex">
