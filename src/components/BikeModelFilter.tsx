@@ -20,7 +20,7 @@ interface DropdownAndCheckboxes {
 }
 const DropdownAndCheckboxes: React.FC<DropdownAndCheckboxes> = ({ name }) => {
   const optionsPerColumn = 3;
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -33,10 +33,10 @@ const DropdownAndCheckboxes: React.FC<DropdownAndCheckboxes> = ({ name }) => {
     }
   };
   return (
-    <div className="w-full p-2">
+    <div className="w-full">
       <button
         type="button"
-        className="w-full flex items-center bg-white rounded-md shadow-sm px-4 py-2 text-sm font-medium text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+        className="w-full flex items-center bg-white rounded-md text-slate-950 text-base font-bold font-['Poppins'] mt-4"
         onClick={toggleDropdown}
       >
         {name}
@@ -55,12 +55,12 @@ const DropdownAndCheckboxes: React.FC<DropdownAndCheckboxes> = ({ name }) => {
             fillRule="evenodd"
             clipRule="evenodd"
             d="M5.293 6.293a1 1 0 011.414 0L10 9.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414zM10 11a1 1 0 100 2 1 1 0 000-2z"
-            fill="currentColor"
+            fill="black"
           />
         </svg>
       </button>
       {isOpen && (
-        <div className="origin-top-right right-0 mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+        <div className="origin-top-right right-0 mt-2 w-full">
           <div
             className="py-1"
             role="menu"
@@ -70,7 +70,7 @@ const DropdownAndCheckboxes: React.FC<DropdownAndCheckboxes> = ({ name }) => {
             {OPTIONS.map((option) => (
               <label
                 key={option.value}
-                className="flex items-center cursor-pointer px-4 py-1"
+                className="flex items-center cursor-pointer py-1"
               >
                 <input
                   type="checkbox"

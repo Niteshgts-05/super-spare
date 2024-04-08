@@ -120,14 +120,14 @@ const ProductPage = () => {
         </div>
       </div>
       {/* Product */}
-      <div className="pt-20 flex flex-wrap" style={{ marginTop: "3.75rem" }}>
+      <div className="flex flex-wrap" style={{ marginTop: "8.25rem" }}>
         {DUMMY_DATA.map((data, index) => (
           <div
             key={index}
-            className="mb-2 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto bg-green-100 rounded-lg overflow-hidden"
+            className="mb-2 w-full h-[296px] md:w-[450px] md:h-[300px] mx-4 my-2 bg-green-100 rounded-lg overflow-hidden flex flex-col justify-between relative"
           >
             <div
-              className="w-[328px] h-[202px] md:w-[450px] md:h-[300px] relative"
+              className="w-full h-[202px] md:w-[450px] md:h-[300px] relative"
               style={{ overflow: "hidden" }}
             >
               <div className="left-[8px] top-[8px] absolute flex-col justify-start items-start gap-1 inline-flex">
@@ -148,17 +148,17 @@ const ProductPage = () => {
                   </div>
                 </div>
               </div>
-              <div className="px-3 py-[1px] left-[242px] top-[8px] absolute bg-white rounded-[20px] justify-center items-center gap-1 inline-flex">
+              <div className="px-3 py-[1px] right-2 top-[8px] absolute bg-white rounded-[20px] justify-center items-center gap-1 inline-flex">
                 <div className="text-center text-slate-950 text-[15px] font-medium font-['Poppins']">
                   {data.size}mm
                 </div>
               </div>
               <img
-                className="w-44 h-[194px] md:w-64 md:h-[250px] left-[152px] top-[52px] absolute"
+                className="w-44 h-[194px] md:w-64 md:h-[250px] right-0 top-[52px] absolute"
                 src="/image 73.png"
               />
             </div>
-            <div className="flex justify-between flex-row bg-white py-2 w-[100%] h-[100px] md:w-[450px] md:h-[100px]">
+            <div className="flex justify-between flex-row bg-white py-2 w-full md:w-[450px] md:h-[100px]">
               <div className="w-40 h-[77px] flex-col justify-start items-start gap-px inline-flex ml-3">
                 <div className="text-slate-950 text-sm font-normal font-['Poppins'] capitalize leading-[21px]">
                   ₹{data.size}/unit
@@ -173,11 +173,15 @@ const ProductPage = () => {
               <div className="w-[140px] h-[67px] relative">
                 <div className="w-[135.48px] h-[63px] left-[4.52px] top-[4px] absolute rounded-xl border border-slate-950" />
                 <div className="w-[135.48px] h-[63px] left-0 top-0 absolute bg-slate-950 rounded-[9px]" />
-                <div className="left-[13.77px] top-[24px] absolute text-center text-white text-xl font-bold font-['Poppins']">
+                <button
+                  // onClick={() => alert(data.unit_price)}
+                  className="left-[2.77px] top-[16px] absolute inset-x-0 text-center text-white text-xl font-bold font-['Poppins']"
+                >
                   Order Now
-                </div>
+                </button>
               </div>
             </div>
+            <div className="absolute bottom-0 left-0 right-0 border-b border-dotted border-gray-400"></div>
           </div>
         ))}
       </div>

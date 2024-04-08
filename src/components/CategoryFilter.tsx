@@ -6,15 +6,15 @@ interface Option {
   imageUrl: string;
 }
 const OPTIONS: Option[] = [
-  { value: "option1", label: "Option 1", imageUrl: "/image 63.png" },
+  { value: "option1", label: "Option 1", imageUrl: "/image 55.png" },
   { value: "option2", label: "Option 2", imageUrl: "/image 63.png" },
-  { value: "option3", label: "Option 3", imageUrl: "/image 63.png" },
+  { value: "option3", label: "Option 3", imageUrl: "/image 55.png" },
   { value: "option4", label: "Option 4", imageUrl: "/image 63.png" },
-  { value: "option5", label: "Option 5", imageUrl: "/image 63.png" },
+  { value: "option5", label: "Option 5", imageUrl: "/image 55.png" },
   { value: "option6", label: "Option 6", imageUrl: "/image 63.png" },
-  { value: "option7", label: "Option 7", imageUrl: "/image 63.png" },
+  { value: "option7", label: "Option 7", imageUrl: "/image 55.png" },
   { value: "option8", label: "Option 8", imageUrl: "/image 63.png" },
-  { value: "option9", label: "Option 9", imageUrl: "/image 63.png" },
+  { value: "option9", label: "Option 9", imageUrl: "/image 55.png" },
 ];
 interface DropdownWithImagesAndCheckboxes {
   name: string;
@@ -23,7 +23,7 @@ const DropdownWithImagesAndCheckboxes: React.FC<
   DropdownWithImagesAndCheckboxes
 > = ({ name }) => {
   const optionsPerColumn = 3;
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -36,10 +36,10 @@ const DropdownWithImagesAndCheckboxes: React.FC<
     }
   };
   return (
-    <div className="w-full p-2">
+    <div className="w-full">
       <button
         type="button"
-        className="w-full flex items-center bg-white rounded-md shadow-sm px-4 py-2 text-sm font-medium text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+        className="w-full flex items-center bg-white rounded-md text-slate-950 text-base font-bold font-['Poppins'] mt-4"
         onClick={toggleDropdown}
       >
         {name}
@@ -58,12 +58,12 @@ const DropdownWithImagesAndCheckboxes: React.FC<
             fillRule="evenodd"
             clipRule="evenodd"
             d="M5.293 6.293a1 1 0 011.414 0L10 9.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414zM10 11a1 1 0 100 2 1 1 0 000-2z"
-            fill="currentColor"
+            fill="black"
           />
         </svg>
       </button>
       {isOpen && (
-        <div className="origin-top-right right-0 mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+        <div className="origin-top-right right-0 mt-2 w-full">
           <div
             className="py-1 flex justify-center"
             role="menu"
@@ -78,20 +78,21 @@ const DropdownWithImagesAndCheckboxes: React.FC<
                       (option) => (
                         <label
                           key={option.value}
-                          className="flex items-center cursor-pointer px-4 py-2 border border-gray-300 rounded-md"
+                          className="flex items-center cursor-pointer px-4 py-2 border border-gray-100"
                         >
                           <Image
                             alt={option.label}
                             src={option.imageUrl}
                             width="100"
                             height="70"
+                            className="custom-image"
                           />
                           <input
                             type="checkbox"
                             value={option.value}
                             checked={selectedOptions.includes(option.value)}
                             onChange={() => handleOptionClick(option.value)}
-                            style={{ marginTop: "-50px", marginLeft: "5px" }}
+                            style={{ marginTop: "-50px" }}
                             className="checked:bg-gray-900"
                           />
                         </label>
@@ -101,6 +102,7 @@ const DropdownWithImagesAndCheckboxes: React.FC<
                 )
             )}
           </div>
+          <div className="border-b border-dotted border-gray-400 w-full mt-5" />
         </div>
       )}
     </div>

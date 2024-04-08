@@ -25,3 +25,9 @@
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+.custom-image {
+  object-fit: cover;
+  width: 100px;
+  height: 70px;
+}

@@ -1,4 +1,6 @@
 import { PropsWithChildren, useEffect } from "react";
+import CloseIcon from "@/pages/icons/CloseIcon";
+
 type DIRECTION = "LEFT" | "RIGHT";
 interface Props extends PropsWithChildren {
   isOpen: boolean;
@@ -34,7 +36,7 @@ const SideDrawer = ({
       <section
         className={`fixed ${isOpen ? "w-screen" : "w-0"} h-full top-0 ${
           direction === "LEFT" ? "left-0" : "right-0"
-        } bg-white shadow-xl ease-in-out transition-all text-black duration-300 z-50`}
+        } bg-white shadow-xl ease-in-out transition-all text-black duration-300 z-50 p-4`}
         style={{
           transform: `translateX(${
             isOpen ? "0px" : direction === "LEFT" ? "-100%" : "100%"
@@ -51,22 +53,15 @@ const SideDrawer = ({
             }
           }}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 mt-1 ml-1"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
+          <div className="w-8 h-8 relative">
+            <div className="w-8 h-8 left-0 top-0 absolute bg-white rounded-full shadow" />
+            <div className="w-5 h-5 left-[6px] top-[6px] absolute">
+              <CloseIcon />
+            </div>
+          </div>
         </button>
-        <article className="relative max-w-lg flex flex-col overflow-y-scroll h-full mt-0">
+
+        <article className="relative w-full flex flex-col overflow-y-scroll h-full">
           {children}
         </article>
       </section>
