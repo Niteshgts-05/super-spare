@@ -30,7 +30,12 @@ const ProductDetail = ({ product }: Props) => {
         Saving {product.saving}%
       </div>
       <div className="bg-[#e6f5e8] w-full h-[250px] relative">
-        <Image src={product.image} alt={product.image} layout="fill" />
+        <Image
+          src={product.image}
+          alt={product.image}
+          fill={true}
+          className="object-contain"
+        />
       </div>
       <Attribute name="Product name" value={product.title} />
       <Attribute name="Part brand" value={product.title} />

@@ -53,8 +53,13 @@ const SearchResults = () => {
           onClick={() => openDrawer(brand)}
           className="flex items-center gap-2"
         >
-          <div className="h-[62px] min-h-[62px] w-[56px] min-w-[56px] relative rounded-[12px]">
-            <Image src={brand.image} alt={brand.image} layout="fill" />
+          <div className="h-[62px] min-h-[62px] w-[56px] min-w-[56px] relative rounded-[12px] relative">
+            <Image
+              src={brand.image}
+              alt={brand.image}
+              fill={true}
+              className="object-contain"
+            />
           </div>
           <div className="truncate flex-1 text-[#000] font-normal text-sm">
             {brand.title}

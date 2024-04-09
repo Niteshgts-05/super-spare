@@ -17,8 +17,8 @@ export const ProductCard = ({ product }: Props) => {
       <div className="bg-white w-max max-w-full truncate text-black text-opacity-80 px-3 py-[9px] rounded-[30px] mb-2">
         {name}
       </div>
-      <div className="h-[135px] w-full relative mb-2">
-        <Image src={image} alt={image} layout="fill" />
+      <div className="h-[135px] w-full mb-2 flex items-center justify-center relative">
+        <Image src={image} alt={image} fill={true} className="object-contain" />
       </div>
       <div
         className="flex flex-row items-center justify-between p-1 bottom-2 w-full

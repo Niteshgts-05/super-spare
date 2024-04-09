@@ -10,8 +10,8 @@ export const CategoryCard = ({ category }: Props) => {
 
   return (
     <article className="w-[100px] min-w-[100px]">
-      <div className="bg-[#EDEFF2] min-w-full min-h-[100px] relative mb-1 rounded-[12px]">
-        <Image src={image} alt={image} layout="fill" />
+      <div className="bg-[#EDEFF2] min-w-full min-h-[100px] mb-1 rounded-[12px] relative">
+        <Image src={image} alt={image} fill={true} className="object-contain" />
       </div>
       <div className="text-[#000] capitalize text-center font-normal text-3 leading-4">
         {title}
