@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Category } from "@/models/Category";
 import SearchBar from "@/components/SearchBar";
 import Categories from "@/components/Categories";
