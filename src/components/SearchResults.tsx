@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useRouter } from "next/router";
 import Image from "next/image";
 import { SearchResult } from "@/models/SearchResult";
 import Drawer from "./common/Drawer";
@@ -37,6 +38,8 @@ const DUMMY_SEARCH_RESULTS: SearchResult[] = [
 ];
 
 const SearchResults = () => {
+  const { push } = useRouter();
+
   const [selectedProduct, setSelectedProduct] = useState<SearchResult | null>(
     null
   );
@@ -50,7 +53,11 @@ const SearchResults = () => {
       {DUMMY_SEARCH_RESULTS.map((brand) => (
         <div
           key={brand.id}
-          onClick={() => openDrawer(brand)}
+          onClick={() => {
+            brand.type === "product"
+              ? openDrawer(brand)
+              : push(`/products/${brand.id}`);
+          }}
           className="flex items-center gap-2"
         >
           <div className="h-[62px] min-h-[62px] w-[56px] min-w-[56px] relative rounded-[12px] relative">

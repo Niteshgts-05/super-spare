@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const DUMMY_IMAGES = [
   {
-    image: "/Banner.png",
+    image: "/banner.png",
     alt: "zT6}516t",
   },
   {
@@ -10,7 +10,23 @@ const DUMMY_IMAGES = [
     alt: "hA3)cHp2pG",
   },
   {
-    image: "/Banner.png",
+    image: "/banner.png",
+    alt: "zT6}516t",
+  },
+  {
+    image: "https://dummyimage.com/521x325.png/dddddd/000000",
+    alt: "hA3)cHp2pG",
+  },
+  {
+    image: "/banner.png",
+    alt: "zT6}516t",
+  },
+  {
+    image: "https://dummyimage.com/521x325.png/dddddd/000000",
+    alt: "hA3)cHp2pG",
+  },
+  {
+    image: "/banner.png",
     alt: "zT6}516t",
   },
 
@@ -19,24 +35,7 @@ const DUMMY_IMAGES = [
     alt: "hA3)cHp2pG",
   },
   {
-    image: "/Banner.png",
-    alt: "zT6}516t",
-  },
-  {
-    image: "https://dummyimage.com/521x325.png/dddddd/000000",
-    alt: "hA3)cHp2pG",
-  },
-  {
-    image: "/Banner.png",
-    alt: "zT6}516t",
-  },
-
-  {
-    image: "https://dummyimage.com/521x325.png/dddddd/000000",
-    alt: "hA3)cHp2pG",
-  },
-  {
-    image: "/Banner.png",
+    image: "/banner.png",
     alt: "zT6}516t",
   },
 ];

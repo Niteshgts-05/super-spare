@@ -17,6 +17,9 @@ const config: Config = {
         2.5: "0.625rem",
         8: "2rem",
       },
+      fontFamily: {
+        poppins: "Poppins",
+      },
     },
   },
   plugins: [],
