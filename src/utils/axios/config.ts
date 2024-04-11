@@ -1,7 +1,7 @@
 import Axios from "axios";
 
 const axios = Axios.create({
-  baseURL: "http://13.201.71.135:5000",
+  baseURL: "http://43.205.169.70:5000",
 });
 
 // axios.defaults.headers.common["Access-Control-Allow-Origin"] = "*";
