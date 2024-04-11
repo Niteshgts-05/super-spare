@@ -19,9 +19,6 @@ const OPTIONS: Option[] = [
   { value: "option8", label: "Option 8", imageUrl: "/image_63.png" },
   { value: "option9", label: "Option 9", imageUrl: "/image_55.png" },
 ];
-
-const optionsPerColumn = 3;
-
 interface DropdownWithImagesAndCheckboxes {
   name: string;
 }
@@ -29,6 +26,7 @@ interface DropdownWithImagesAndCheckboxes {
 const DropdownWithImagesAndCheckboxes: React.FC<
   DropdownWithImagesAndCheckboxes
 > = ({ name }) => {
+  const optionsPerColumn = 3;
   const [isOpen, setIsOpen] = useState(true);
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
 
@@ -79,25 +77,23 @@ const DropdownWithImagesAndCheckboxes: React.FC<
                           key={option.value}
                           className="w-[109px] h-[109px] relative bg-white border border-gray-100"
                         >
-                          <div className="w-[100px] h-[70px] left-[5px] top-[28px]">
-                            <div className="w-6 h-6 right-[0px] top-[6px] absolute">
-                              <input
-                                type="checkbox"
-                                value={option.value}
-                                checked={selectedOptions.includes(option.value)}
-                                onChange={() => handleOptionClick(option.value)}
-                                className="w-[18px] h-[18px] left-[3px] top-[5px] accent-[#02A44F] focus:accent-[#02A44F] checked"
+                          <label className="block w-[109px] h-[109px] relative">
+                            <input
+                              onChange={() => handleOptionClick(option.value)}
+                              type="checkbox"
+                              value={option.value}
+                              checked={selectedOptions.includes(option.value)}
+                              className="w-[18px] h-[18px] absolute right-2 top-[5px] accent-[#02A44F] focus:accent-[#02A44F] checked"
+                            />
+                            <div className="w-[86px] h-[86px] px-[7.17px] py-[17.92px] left-[11px] top-[12px] absolute justify-center items-center inline-flex">
+                              <Image
+                                alt={option.label}
+                                src={option.imageUrl}
+                                width="100"
+                                height="70"
                               />
                             </div>
-                          </div>
-                          <div className="w-[86px] h-[86px] px-[7.17px] py-[17.92px] left-[11px] top-[12px] absolute justify-center items-center inline-flex">
-                            <Image
-                              alt={option.label}
-                              src={option.imageUrl}
-                              width="100"
-                              height="70"
-                            />
-                          </div>
+                          </label>
                         </div>
                       )
                     )}

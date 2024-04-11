@@ -4,8 +4,8 @@ import SideDrawer from "./SideDrawer";
 import CategoryFilter from "@/components/CategoryFilter";
 import BikeModelFilter from "@/components/BikeModelFilter";
 import BackwardIcon from "@/icons/Backward";
-import MenuIcon from "@/icons/Menu";
 import ForwardIcon from "@/icons/Forward";
+import FilterIcon from "@/icons/Filter";
 
 const AppBar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -29,14 +29,20 @@ const AppBar = () => {
           </div>
         </div>
       </button>
-      <button onClick={toggleDrawer} className="text-gray-500">
-        <div className="w-9 h-9 relative">
-          <div className="w-9 h-9 left-0 top-0 absolute bg-neutral-950 rounded-full" />
-          <div className="w-[12.96px] h-[11.52px] left-[11.52px] top-[12.24px] absolute">
-            <MenuIcon />
+      <div
+        onClick={toggleDrawer}
+        className="w-[82px] h-8 px-3 py-1 bg-neutral-950 rounded-[38px] flex-col justify-start items-start gap-1 inline-flex"
+      >
+        <div className="justify-end items-center gap-1 inline-flex">
+          <div className="w-6 h-6 relative">
+            <FilterIcon />
+          </div>
+          <div className="text-right text-white text-xs font-semibold font-poppins">
+            Filter
           </div>
         </div>
-      </button>
+      </div>
+
       <SideDrawer isOpen={isDrawerOpen} onClose={handleCloseDrawer}>
         <div className="text-slate-950 text-xl font-bold font-poppins capitalize leading-[25px]">
           Select Filters
