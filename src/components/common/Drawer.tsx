@@ -22,8 +22,6 @@ const Drawer: FC<PropsWithChildren<CollapsibleProps>> = ({
   );
   const contentRef = useRef<HTMLDivElement>(null);
 
-  const maxHeightInPx = (window.innerHeight * maxHeightPercent) / 100;
-
   useEffect(() => {
     document.body.style.overflow = "hidden";
     document.body.style.overscrollBehavior = "none";
@@ -53,7 +51,7 @@ const Drawer: FC<PropsWithChildren<CollapsibleProps>> = ({
         className="absolute bottom-0 fixed w-full max-w-full transition-height duration-500 overflow-hidden z-[11] pointer-events-none"
         style={{
           height: `${dynamicHeight}px`,
-          maxHeight: maxHeightInPx,
+          maxHeight: `${maxHeightPercent}%`,
         }}
         onClick={(e) => e.stopPropagation()}
       >
@@ -73,7 +71,7 @@ const Drawer: FC<PropsWithChildren<CollapsibleProps>> = ({
         className="bg-white rounded-t-[20px] scrollbar-hide overflow-auto absolute bottom-0 fixed w-full max-w-full transition-height duration-500"
         style={{
           height: `${dynamicHeight}px`,
-          maxHeight: maxHeightInPx,
+          maxHeight: `${maxHeightPercent}%`,
         }}
         onClick={(e) => e.stopPropagation()}
         onScrollCapture={() => setMaxHeightPercent(80)}

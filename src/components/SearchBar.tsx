@@ -1,6 +1,4 @@
-import { ChangeEvent, FunctionComponent, useEffect, useState } from "react";
-import Link from "next/link";
-import BackwardIcon from "@/icons/Backward";
+import { ChangeEvent, FunctionComponent } from "react";
 import SearchIcon from "@/icons/Search";
 
 interface SearchBarProps {
@@ -12,24 +10,13 @@ const SearchBar: FunctionComponent<SearchBarProps> = ({
   searchedText,
   setSearchedText,
 }) => {
-  const [showBackButton, setShowBackButton] = useState(false);
-
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
     setSearchedText?.(value);
   };
 
-  useEffect(() => {
-    if (window.history.length > 1) setShowBackButton(true);
-  }, []);
-
   return (
     <section className="flex gap-3 pl-[10px] pr-[16px] mt-2 mb-5">
-      {showBackButton && (
-        <Link href="/home" className="flex items-center">
-          <BackwardIcon />
-        </Link>
-      )}
       <div className="flex flex-1 items-center gap-1 px-4 py-3 bg-[#F3F5F8] rounded-[50px]">
         <SearchIcon />
         <input
