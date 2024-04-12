@@ -46,9 +46,9 @@ const HotDeals = () => {
     <section className="my-5">
       <div className="flex justify-between items-center h6 mx-2 mb-2">
         <div className="text-[#627087] text-base font-semibold">Hot Deals</div>
-        <Link href="" className="text-[#627087] text-xs font-semibold h-[18px]">
+        {/* <Link href="" className="text-[#627087] text-xs font-semibold h-[18px]">
           View All
-        </Link>
+        </Link> */}
       </div>
       <div className="flex flex-sb w-full overflow-x-scroll scrollbar-hide">
         {DUMMY_PRODUCTS.map((product) => (

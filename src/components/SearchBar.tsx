@@ -1,6 +1,4 @@
 import { ChangeEvent, FunctionComponent } from "react";
-import Link from "next/link";
-import BackwardIcon from "@/icons/Backward";
 import SearchIcon from "@/icons/Search";
 
 interface SearchBarProps {
@@ -19,9 +17,6 @@ const SearchBar: FunctionComponent<SearchBarProps> = ({
 
   return (
     <section className="flex gap-3 pl-[10px] pr-[16px] mt-2 mb-5">
-      <Link href="/home" className="flex items-center">
-        <BackwardIcon />
-      </Link>
       <div className="flex flex-1 items-center gap-1 px-4 py-3 bg-[#F3F5F8] rounded-[50px]">
         <SearchIcon />
         <input

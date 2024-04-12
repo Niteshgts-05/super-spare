@@ -17,9 +17,14 @@ const OemBrands = () => {
         {DUMMY_OEM_BRANDS.map((brand, i) => (
           <div
             key={i}
-            className="bg-[lightgray] min-h-[60px] w-[60px] min-w-[60px] relative rounded-[12px]"
+            className="bg-[lightgray] min-h-[60px] w-[60px] min-w-[60px] rounded-[12px] relative"
           >
-            <Image src={brand} alt={brand} layout="fill" />
+            <Image
+              src={brand}
+              alt={brand}
+              fill={true}
+              className="object-contain"
+            />
           </div>
         ))}
       </div>
